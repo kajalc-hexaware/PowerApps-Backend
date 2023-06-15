@@ -1,0 +1,17 @@
+const mongoose=require('mongoose')
+
+const dbUrl=
+"mongodb+srv://kajal7107:GzkeTRLr6NnIEgmX@cluster0.yvnvq0h.mongodb.net/mentorMentee-database?retryWrites=true&w=majority"
+
+const connectionParams={
+    useNewUrlParser:true,
+    useUnifiedTopology:true
+}
+
+mongoose.connect(dbUrl,connectionParams)
+.then(()=>{
+    console.log("Connected to the DB")
+})
+.catch((e)=>{
+    console.log("Error:",e)
+})
